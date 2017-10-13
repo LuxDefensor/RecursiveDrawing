@@ -67,7 +67,7 @@ namespace RecursiveDrawings
                     {
                         float currentRatio = (float)_canvasSize.Width / _canvasSize.Height;
                         picture.Width = panel.Width;
-                        picture.Height = (int)(picture.Width / currentRatio);
+                        picture.Height = (int)(picture.Width * currentRatio);
                         picture.Left = 0;
                         picture.Top = (panel.Height - picture.Height) / 2;
                         picture.SizeMode = PictureBoxSizeMode.StretchImage;
