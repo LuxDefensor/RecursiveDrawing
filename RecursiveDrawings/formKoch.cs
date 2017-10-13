@@ -66,21 +66,21 @@ namespace RecursiveDrawings
                 case "Fit width":
                     {
                         float currentRatio = (float)_canvasSize.Width / _canvasSize.Height;
+                        picture.SizeMode = PictureBoxSizeMode.StretchImage;
                         picture.Width = panel.Width;
-                        picture.Height = (int)(picture.Width * currentRatio);
+                        picture.Height = (int)(picture.Width / currentRatio);
                         picture.Left = 0;
                         picture.Top = (panel.Height - picture.Height) / 2;
-                        picture.SizeMode = PictureBoxSizeMode.StretchImage;
                         break;
                     }
                 case "Fit height":
                     {
                         float currentRatio = (float)_canvasSize.Width / _canvasSize.Height;
+                        picture.SizeMode = PictureBoxSizeMode.StretchImage;
                         picture.Height = panel.Height;
                         picture.Width = (int)(picture.Height * currentRatio);
                         picture.Left = (panel.Width - picture.Width) / 2;
                         picture.Top = 0;
-                        picture.SizeMode = PictureBoxSizeMode.StretchImage;
                         break;
                     }
             }
